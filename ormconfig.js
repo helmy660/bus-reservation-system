@@ -10,6 +10,10 @@ module.exports = {
     username: process.env.TYPEORM_USERNAME,
     password: process.env.TYPEORM_PASSWORD,
     synchronize: false,
-    entities: ['src/entities/ecommerce/**/*.ts'],
-    migrations: ['src/migrations/**/*.ts']
+    entities: ['src/entities/**/*.ts'],
+    migrations: ['src/migrations/**/*.ts'],
+    cli: {
+        entitiesDir: 'src/entities',
+        migrationsDir: 'src/migrations',
+    },
 }
