@@ -1,0 +1,45 @@
+{
+  "name": "bus-reservation-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "start:dev": "nodemon",
+    "start": "npm run build && node dist/app.js",
+    "build": "rm -rf build && tsc",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helmy660/bus-reservation-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helmy660/bus-reservation-system/issues"
+  },
+  "homepage": "https://github.com/helmy660/bus-reservation-system#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "class-validator": "^0.12.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.8.0",
+    "routing-controllers": "^0.9.0",
+    "typeorm": "^0.3.10"
+  }
+}
