@@ -5,8 +5,8 @@ export class CreateReservationTable1667000062974 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`
             CREATE TABLE reservation (
-                id serial PRIMARY KEY,
-                user_id serial NOT NULL,
+                id int PRIMARY KEY,
+                user_id int NOT NULL,
                 trip_id int NOT NULL,
                 num_of_seats int NOT NULL,
                 base_price float NOT NULL,

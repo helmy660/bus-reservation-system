@@ -5,8 +5,8 @@ export class CreateTicketTable1667000353762 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`
             CREATE TABLE ticket (
-                id serial PRIMARY KEY,
-                reservation_id serial NOT NULL,
+                id int PRIMARY KEY,
+                reservation_id int NOT NULL,
                 trip_id int NOT NULL,
                 bus_seat_id int NOT NULL,
                 status varchar(45) DEFAULT 'active',
