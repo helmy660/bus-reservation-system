@@ -1,11 +1,11 @@
-import { IsString } from 'class-validator';
+import { IsNumber, IsString } from 'class-validator';
 import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { BaseEntity } from './BaseEntity';
 import Bus from './bus';
 
 @Entity({ name: 'bus_seat' })
 export class BusSeat extends BaseEntity {
-    @ManyToOne(() => Bus, { eager: true, nullable: true })
+    @IsNumber()
     @JoinColumn({ name: 'bus_id' })
     bus!: Bus;
 

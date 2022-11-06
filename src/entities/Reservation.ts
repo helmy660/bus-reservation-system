@@ -7,11 +7,11 @@ import { RESERVATION_STATUS } from '../enum';
 
 @Entity({ name: 'reservation' })
 export class Reservation extends BaseEntity {
-    @ManyToOne(() => User, { eager: true, nullable: true })
+    @ManyToOne(() => User, (user) => user.reservations)
     @JoinColumn({ name: 'user_id' })
     user!: User;
 
-    @ManyToOne(() => Trip, { eager: true, nullable: true })
+    @IsNumber()
     @JoinColumn({ name: 'trip_id' })
     trip!: Trip;
 
